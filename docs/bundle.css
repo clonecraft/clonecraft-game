@@ -1,0 +1,1186 @@
+/*
+https://github.com/Hanul/sky-css-base
+v0.0.1 | 20210109
+Author: Sim Young Jae
+License: MIT
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*,
+*:focus {
+  outline: 0;
+}
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+a,
+button,
+input[type=button],
+input[type=submit],
+input[type=reset] {
+  cursor: pointer;
+}
+button,
+input {
+  border: none;
+}
+[hidden] {
+  display: none !important;
+}
+[contenteditable] {
+  -webkit-tap-highlight-color: transparent;
+}
+.float-wrapper:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+@font-face {
+  font-family: 'Trajan Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Trajan Pro Regular'), url('fonts/TrajanPro-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Trajan Pro Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Trajan Pro Bold'), url('fonts/TrajanPro-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'NanumMyeongjo';
+  font-style: normal;
+  font-weight: normal;
+  src: local('NanumMyeongjo'), url('fonts/NanumMyeongjo.woff') format('woff');
+}
+@font-face {
+  font-family: 'NanumMyeongjo Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('NanumMyeongjo Bold'), url('fonts/NanumMyeongjoBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'NanumMyeongjo Extra Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('NanumMyeongjo Extra Bold'), url('fonts/NanumMyeongjoExtraBold.woff') format('woff');
+}
+.battle-button {
+  background-image: url("/images/ui/battle-button.png");
+  background-size: 100% 100%;
+}
+.user-info-panel {
+  background-image: url("/images/ui/user-info-panel.png");
+  background-size: 100% 100%;
+  display: flex;
+}
+.user-info-panel > .profile-image {
+  background-image: url("/images/character/character1.jpeg");
+  background-size: 100% 100%;
+  width: 95px;
+  height: 85px;
+  margin-top: 12px;
+  margin-left: 18px;
+  border-radius: 2px;
+}
+.user-info-panel > .info-container > h6 {
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  padding-top: 28px;
+  padding-left: 8px;
+  font-size: 24px;
+}
+.user-info-panel > .info-container > p {
+  font-family: 'Trajan Pro Regular';
+  color: #e1e2b5;
+  padding-top: 4px;
+  padding-left: 8px;
+  font-size: 14px;
+}
+.tool-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+.tool-panel > a {
+  display: block;
+  width: 128px;
+  height: 115px;
+}
+.tool-panel > .team {
+  background-image: url("/images/ui/team-button.png");
+  background-size: 100% 100%;
+}
+.tool-panel > .explore {
+  background-image: url("/images/ui/explore-button.png");
+  background-size: 100% 100%;
+}
+.tool-panel > .stage {
+  background-image: url("/images/ui/stage-button.png");
+  background-size: 100% 100%;
+}
+.ember-panel {
+  background-image: url("/images/ui/ember-panel.png");
+  background-size: 100% 100%;
+}
+.ember-panel > p {
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  font-size: 24px;
+  padding-top: 30px;
+  padding-right: 80px;
+  font-size: 21px;
+  text-align: right;
+}
+.popup-background {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.battle-popup {
+  background-image: url("/images/ui/popup.png");
+  background-size: 100% 100%;
+  width: 1000px;
+  height: 600px;
+  position: relative;
+}
+.battle-popup > .top {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.battle-popup > .top > h6 {
+  margin-top: 6px;
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  font-size: 24px;
+}
+.battle-popup > .top > a {
+  height: 40px;
+}
+.battle-popup > .top > a > img {
+  height: 40px;
+}
+.battle-popup > .my-panel,
+.battle-popup > .enemy-panel {
+  width: 440px;
+  height: 500px;
+  position: absolute;
+}
+.battle-popup > .my-panel > .profile-image,
+.battle-popup > .enemy-panel > .profile-image {
+  position: absolute;
+  background-image: url("/images/ui/profile-image-frame.png");
+  background-size: 100% 100%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.battle-popup > .my-panel > .profile-image > img,
+.battle-popup > .enemy-panel > .profile-image > img {
+  width: 100px;
+  height: 100px;
+}
+.battle-popup > .my-panel > .units,
+.battle-popup > .enemy-panel > .units {
+  position: absolute;
+  background-image: url("/images/ui/panel-background.png");
+  background-size: 100% 100%;
+  width: 300px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.battle-popup > .my-panel > .units > .character,
+.battle-popup > .enemy-panel > .units > .character {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+.battle-popup > .my-panel > .units > .character > img,
+.battle-popup > .enemy-panel > .units > .character > img {
+  width: 100%;
+  height: 100%;
+}
+.battle-popup > .my-panel > .attack-button,
+.battle-popup > .enemy-panel > .attack-button,
+.battle-popup > .my-panel > .defence-button,
+.battle-popup > .enemy-panel > .defence-button {
+  position: absolute;
+  background-image: url("/images/ui/button.png");
+  background-size: 100% 100%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.battle-popup > .my-panel > .attack-button > img,
+.battle-popup > .enemy-panel > .attack-button > img,
+.battle-popup > .my-panel > .defence-button > img,
+.battle-popup > .enemy-panel > .defence-button > img {
+  width: 40px;
+  height: 40px;
+}
+.battle-popup > .my-panel > .skills,
+.battle-popup > .enemy-panel > .skills {
+  position: absolute;
+  background-image: url("/images/ui/panel-background.png");
+  background-size: 100% 100%;
+  width: 300px;
+  height: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.battle-popup > .my-panel > .skills > .skill-button,
+.battle-popup > .enemy-panel > .skills > .skill-button {
+  width: 55px;
+  height: 55px;
+}
+.battle-popup > .my-panel > .skills > .skill-button > img,
+.battle-popup > .enemy-panel > .skills > .skill-button > img {
+  width: 100%;
+  height: 100%;
+}
+.battle-popup > .my-panel {
+  left: 50px;
+  top: 50px;
+}
+.battle-popup > .my-panel > .profile-image {
+  right: 0px;
+  top: 100px;
+}
+.battle-popup > .my-panel > .attack-button {
+  left: 0;
+  bottom: 100px;
+}
+.battle-popup > .my-panel > .defence-button {
+  left: 0;
+  bottom: 50px;
+}
+.battle-popup > .my-panel > .skills {
+  left: 50px;
+  bottom: 0;
+}
+.battle-popup > .enemy-panel {
+  right: 50px;
+  top: 50px;
+}
+.battle-popup > .enemy-panel > .profile-image {
+  left: 0px;
+  top: 100px;
+}
+.battle-popup > .enemy-panel > .units {
+  right: 0;
+}
+.battle-popup > .enemy-panel > .attack-button {
+  right: 0;
+  bottom: 100px;
+}
+.battle-popup > .enemy-panel > .defence-button {
+  right: 0;
+  bottom: 50px;
+}
+.battle-popup > .enemy-panel > .skills {
+  right: 50px;
+  bottom: 0;
+}
+.battle {
+  width: 100%;
+}
+.battle > .content > header {
+  background-image: url("/images/battle/top.png");
+  padding-left: 32px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 1px;
+}
+.battle > .content > main {
+  display: flex;
+  justify-content: space-between;
+  height: 97vh;
+}
+.battle > .content > main > .player-container,
+.battle > .content > main .enemy-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/images/battle/playerPannel.png");
+  max-width: 202px;
+  width: 100%;
+  max-height: 1080px;
+  height: 100%;
+}
+.battle > .content > main > .player-container > .profile,
+.battle > .content > main .enemy-container > .profile {
+  margin-top: 16px;
+  background-image: url("/images/battle/FairySlot.png");
+  width: 134px;
+  height: 134px;
+  margin-bottom: 32px;
+}
+.battle > .content > main > .player-container > .profile > img,
+.battle > .content > main .enemy-container > .profile > img {
+  width: 134px;
+  height: 134px;
+}
+.battle > .content > main > .player-container > .clone-container,
+.battle > .content > main .enemy-container > .clone-container {
+  display: flex;
+  flex-direction: column;
+}
+.battle > .content > main > .player-container > .clone-container > .clone-slot > .profile,
+.battle > .content > main .enemy-container > .clone-container > .clone-slot > .profile {
+  margin-top: 16px;
+  background-image: url("/images/battle/smallCloneSlot.png");
+  width: 156px;
+  height: 156px;
+}
+.battle > .content > main > .player-container > .clone-container > .clone-slot > .profile > img,
+.battle > .content > main .enemy-container > .clone-container > .clone-slot > .profile > img {
+  width: 156px;
+  height: 156px;
+}
+.battle > .content > main > .player-container > .clone-container > .clone-slot > .hpbar-container,
+.battle > .content > main .enemy-container > .clone-container > .clone-slot > .hpbar-container {
+  background-image: url("/images/battle/hpbarSmall.png");
+  width: 156px;
+  height: 15px;
+}
+.battle > .content > main > .player-container > .clone-container > .clone-slot > .hpbar-container > .bar,
+.battle > .content > main .enemy-container > .clone-container > .clone-slot > .hpbar-container > .bar {
+  background-color: #d6cebe;
+  max-width: 156px;
+  width: 30%;
+  height: 13px;
+}
+.battle > .content > main > .battle-container {
+  width: 100%;
+}
+.battle > .content > main > .battle-container > header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+.battle > .content > main > .battle-container > header > .name {
+  margin-top: 40px;
+  font-family: 'Trajan Pro Bold';
+  font-size: 30px;
+  color: #e1e2b5;
+}
+.battle > .content > main > .battle-container > main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.battle > .content > main > .battle-container > main > .top-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.battle > .content > main > .battle-container > main > .top-container > .slot-container {
+  display: flex;
+  gap: 20px;
+}
+.battle > .content > main > .battle-container > main > .top-container > .slot-container > .large-clone-slot > .profile {
+  margin-top: 16px;
+  background-image: url("/images/battle/CloneSlot.png");
+  width: 232px;
+  height: 232px;
+}
+.battle > .content > main > .battle-container > main > .top-container > .slot-container > .large-clone-slot > .profile > img {
+  width: 232px;
+  height: 232px;
+}
+.battle > .content > main > .battle-container > main > .top-container > .slot-container > .large-clone-slot > .hpbar-container {
+  background-image: url("/images/battle/hpBar.png");
+  width: 232px;
+  height: 22px;
+}
+.battle > .content > main > .battle-container > main > .top-container > .slot-container > .large-clone-slot > .hpbar-container > .bar {
+  background-color: #d6cebe;
+  max-width: 232px;
+  width: 30%;
+  height: 20px;
+}
+.battle > .content > main > .battle-container > main > .top-container > .slot-container > .clone-slot > .profile {
+  margin-top: 16px;
+  background-image: url("/images/battle/smallCloneSlot.png");
+  width: 156px;
+  height: 156px;
+}
+.battle > .content > main > .battle-container > main > .top-container > .slot-container > .clone-slot > .profile > img {
+  width: 156px;
+  height: 156px;
+}
+.battle > .content > main > .battle-container > main > .top-container > .slot-container > .clone-slot > .hpbar-container {
+  background-image: url("/images/battle/hpbarSmall.png");
+  width: 156px;
+  height: 15px;
+}
+.battle > .content > main > .battle-container > main > .top-container > .slot-container > .clone-slot > .hpbar-container > .bar {
+  background-color: #d6cebe;
+  max-width: 156px;
+  width: 30%;
+  height: 13px;
+}
+.battle > .content > main > .battle-container > main > .top-container > .image-container {
+  padding: 0px 72px;
+}
+.battle > .content > main > .battle-container > main > .clone-container {
+  display: flex;
+}
+.battle > .content > main > .battle-container > main > .clone-container > .log-container {
+  width: 471px;
+  height: 585px;
+  background-image: url("/images/battle/battle-log.png");
+  padding-top: 72px;
+  padding-left: 32px;
+  margin: 0px 32px;
+}
+.battle > .content > main > .battle-container > main > .clone-container > .log-container > p {
+  margin-top: 4px;
+  font-family: 'NanumMyeongjo';
+}
+.battle > .content > main > .battle-container > main > .clone-container > .sub-container > .slot-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.battle > .content > main > .battle-container > main > .clone-container > .sub-container > .slot-container > .clone-slot > .profile {
+  margin-top: 16px;
+  background-image: url("/images/battle/smallCloneSlot.png");
+  width: 156px;
+  height: 156px;
+}
+.battle > .content > main > .battle-container > main > .clone-container > .sub-container > .slot-container > .clone-slot > .profile > img {
+  width: 156px;
+  height: 156px;
+}
+.battle > .content > main > .battle-container > main > .clone-container > .sub-container > .slot-container > .clone-slot > .hpbar-container {
+  background-image: url("/images/battle/hpbarSmall.png");
+  width: 156px;
+  height: 15px;
+}
+.battle > .content > main > .battle-container > main > .clone-container > .sub-container > .slot-container > .clone-slot > .hpbar-container > .bar {
+  background-color: #d6cebe;
+  max-width: 156px;
+  width: 30%;
+  height: 13px;
+}
+.battle > .content > main > .battle-container > main > .clone-container > .sub-container > .property-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 16px;
+}
+.battle > .content > main > .battle-container > main > .clone-container > .sub-container > .property-container > .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.battle > .content > main > .enemy-container {
+  background-image: url("/images/battle/enemyPannel.png");
+  max-width: 202px;
+  width: 100%;
+  max-height: 1080px;
+  height: 100%;
+}
+.team-popup {
+  background-image: url("/images/ui/popup.png");
+  background-size: 100% 100%;
+  width: 1000px;
+  height: 600px;
+  position: relative;
+}
+.team-popup > .top {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.team-popup > .top > h6 {
+  margin-top: 6px;
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  font-size: 24px;
+}
+.team-popup > .top > a {
+  height: 40px;
+}
+.team-popup > .top > a > img {
+  height: 40px;
+}
+.team-popup > .content {
+  display: flex;
+}
+.team-popup > .content > .my-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 16px;
+}
+.team-popup > .content > .my-panel > .slot-container {
+  width: 100%;
+}
+.team-popup > .content > .my-panel > .slot-container > .my-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+}
+.team-popup > .content > .my-panel > .slot-container > .my-container > .preset-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+}
+.team-popup > .content > .my-panel > .slot-container > .my-container > .preset-container > a {
+  font-family: 'Trajan Pro Regular';
+  color: #e1e2b5;
+  border: 1px solid #63613F;
+  border-radius: 2px;
+  padding: 12px 8px;
+  margin-top: 8px;
+}
+.team-popup > .content > .my-panel > .slot-container > .my-container > .preset-container > a:hover {
+  background-color: #857552;
+  color: #FFF;
+}
+.team-popup > .content > .my-panel > .slot-container > .my-container > .slot-container {
+  display: flex;
+}
+.team-popup > .content > .my-panel > .slot-container > .my-container > .slot-container > .character-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+}
+.team-popup > .content > .my-panel > .slot-container > .my-container > .slot-container > .character-container > .property {
+  display: flex;
+  align-items: center;
+  margin-left: 4px;
+  font-size: 24px;
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  margin-bottom: 16px;
+}
+.team-popup > .content > .my-panel > .slot-container > .my-container > .slot-container > .character-container > .property > img {
+  width: 70%;
+  height: 70%;
+}
+.team-popup > .content > .my-panel > .slot-container > .my-container > .slot-container > .character-container > .property > p {
+  margin-left: 16px;
+}
+.team-popup > .content > .my-panel > .slot-container > .my-container > .slot-container > .character-container > .character-line {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.team-popup > .content > .my-panel > .slot-container > .my-container > .slot-container > .character-container > .character-line > img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #857552;
+}
+.team-popup > .content > .my-panel > .slot-container > .info-container {
+  display: flex;
+  border: 1px solid #857552;
+  margin-top: 16px;
+  margin-left: 8px;
+}
+.team-popup > .content > .my-panel > .slot-container > .info-container > .profile-wrap {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #857552;
+}
+.team-popup > .content > .my-panel > .slot-container > .info-container > .content {
+  margin-top: 12px;
+  margin-left: 12px;
+}
+.team-popup > .content > .my-panel > .slot-container > .info-container > .content > h6 {
+  font-size: 24px;
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+}
+.team-popup > .content > .my-panel > .slot-container > .info-container > .content > .effect-container {
+  margin-top: 8px;
+}
+.team-popup > .content > .my-panel > .slot-container > .info-container > .content > .effect-container > p {
+  font-family: 'NanumMyeongjo Bold';
+  color: #e1e2b5;
+}
+.team-popup > .content > .collection-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 16px;
+  border: 1px solid #857552;
+  margin-left: 20px;
+  margin-right: 10px;
+  padding: 8px;
+}
+.team-popup > .content > .collection-container > .character-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  gap: 8px;
+}
+.team-popup > .content > .collection-container > .character-container > img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #857552;
+}
+.team-popup > .content > .collection-container > .character-container ::-webkit-scrollbar {
+  width: 14px;
+}
+.team-popup > .content > .collection-container > .character-container ::-webkit-scrollbar-thumb {
+  background: #e1e2b5;
+}
+.team-popup > .content > .collection-container > .check-container {
+  display: flex;
+  margin-top: 8px;
+  gap: 16px;
+}
+.team-popup > .content > .collection-container > .check-container > .checkbox-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #e1e2b5;
+  font-family: 'Trajan Pro Regular';
+}
+.team-popup > .content > .collection-container > .check-container > .checkbox-container > label {
+  margin-left: 4px;
+}
+.team-popup > .content > .collection-container > .button-container {
+  position: absolute;
+  display: flex;
+  gap: 16px;
+  bottom: 25px;
+}
+.team-popup > .content > .collection-container > .button-container > a {
+  background: rgba(29, 27, 24, 0.9);
+  color: #e1e2b5;
+  font-family: 'Trajan Pro Regular';
+  border: 1px solid #857552;
+  padding: 8px 32px;
+}
+.team-popup > .content > .collection-container > .button-container > a:hover {
+  background: rgba(133, 117, 82, 0.9);
+  color: #FFF;
+}
+.ranking-popup {
+  background-image: url("/images/ui/popup.png");
+  background-size: 100% 100%;
+  width: 1000px;
+  height: 600px;
+  position: relative;
+}
+.ranking-popup > .top {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.ranking-popup > .top > h6 {
+  margin-top: 6px;
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  font-size: 24px;
+}
+.ranking-popup > .top > a {
+  height: 40px;
+}
+.ranking-popup > .top > a > img {
+  height: 40px;
+}
+.ranking-popup > .top3-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ranking-popup > .top3-container > .ranking-container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+.ranking-popup > .top3-container > img {
+  margin-top: 200px;
+}
+.ranking-popup > .list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ranking-item {
+  width: 90%;
+}
+.ranking-item > .item-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 96px;
+  background-color: #110f0d;
+  border-top: 1px solid #7f7a53;
+  border-bottom: 1px solid #7f7a53;
+  padding: 0 60px;
+}
+.ranking-item > .item-container > .info-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.ranking-item > .item-container > .info-container > .ranking {
+  font-family: 'Trajan Pro Bold';
+  color: #cac6a5;
+}
+.ranking-item > .item-container > .info-container > img {
+  margin: 4px 16px;
+  height: 80px;
+  border: 1px solid #7f7a53;
+}
+.ranking-item > .item-container > .info-container > .address {
+  font-family: 'Trajan Pro Bold';
+  color: #7f7a53;
+}
+.ranking-item > .item-container > p {
+  font-family: 'Trajan Pro Bold';
+  color: #cac6a5;
+}
+.ranking-top-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Trajan Pro Bold';
+  margin: 16px 0px;
+  color: #cac6a5;
+}
+.ranking-top-item > .rank1-container {
+  position: absolute;
+  top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ranking-top-item > .rank1-container > .image-container {
+  position: relative;
+}
+.ranking-top-item > .rank1-container > .image-container > img {
+  margin: 4px 16px;
+  height: 160px;
+  border: 1px solid #7f7a53;
+}
+.ranking-top-item > .rank1-container > .image-container > p {
+  position: absolute;
+  color: #cac6a5;
+  bottom: 10px;
+  right: 20px;
+}
+.ranking-top-item > .rank1-container > h6 {
+  font-size: 21px;
+}
+.ranking-top-item > .rank1-container > p {
+  color: #7f7a53;
+}
+.ranking-top-item > .rank2-container {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ranking-top-item > .rank2-container > .image-container {
+  position: relative;
+}
+.ranking-top-item > .rank2-container > .image-container > img {
+  margin: 4px 16px;
+  height: 160px;
+  border: 1px solid #7f7a53;
+}
+.ranking-top-item > .rank2-container > .image-container > p {
+  position: absolute;
+  color: #cac6a5;
+  bottom: 10px;
+  right: 20px;
+}
+.ranking-top-item > .rank2-container > h6 {
+  font-size: 21px;
+}
+.ranking-top-item > .rank2-container > p {
+  color: #7f7a53;
+}
+.ranking-top-item > .rank3-container {
+  position: absolute;
+  top: 70px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ranking-top-item > .rank3-container > .image-container {
+  position: relative;
+}
+.ranking-top-item > .rank3-container > .image-container > img {
+  margin: 4px 16px;
+  height: 160px;
+  border: 1px solid #7f7a53;
+}
+.ranking-top-item > .rank3-container > .image-container > p {
+  position: absolute;
+  color: #cac6a5;
+  bottom: 10px;
+  right: 20px;
+}
+.ranking-top-item > .rank3-container > h6 {
+  font-size: 21px;
+}
+.ranking-top-item > .rank3-container > p {
+  color: #7f7a53;
+}
+.unit-status-popup {
+  background-image: url("/images/ui/popup.png");
+  background-size: 100% 100%;
+  width: 1000px;
+  height: 620px;
+  position: relative;
+}
+.unit-status-popup > .top {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.unit-status-popup > .top > h6 {
+  margin-top: 6px;
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  font-size: 24px;
+}
+.unit-status-popup > .top > a {
+  height: 40px;
+}
+.unit-status-popup > .top > a > img {
+  height: 40px;
+}
+.unit-status-popup > .content {
+  display: flex;
+}
+.unit-status-popup > .content > .character-container {
+  width: 40%;
+  margin-top: 16px;
+  margin-left: 32px;
+}
+.unit-status-popup > .content > .character-container > .character {
+  width: 200px;
+  height: 200px;
+}
+.unit-status-popup > .content > .character-container > .slot-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.unit-status-popup > .content > .character-container > .slot-container > .slot {
+  width: 100%;
+}
+.unit-status-popup > .content > .character-container > a {
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  display: block;
+  margin-top: 12px;
+  padding: 12px 0px;
+  max-width: 150px;
+  text-align: center;
+  background-image: url("/images/ui/info-button.png");
+}
+.unit-status-popup > .content > .status-container {
+  margin-top: 16px;
+  margin-left: 32px;
+  width: 50%;
+  overflow-y: scroll;
+  max-height: 500px;
+}
+.unit-status-popup > .content > .status-container > section > h6 {
+  font-size: 21px;
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+}
+.unit-status-popup > .content > .status-container > section > .content > .bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+}
+.unit-status-popup > .content > .status-container > section > .content > .bar-container > .img-wrap {
+  width: 130px;
+}
+.unit-status-popup > .content > .status-container > section > .content > .bar-container > .img-wrap > img {
+  height: 40px;
+}
+.unit-status-popup > .content > .status-container > section > .content > .bar-container > p {
+  font-size: 14px;
+  font-family: 'Trajan Pro Bold';
+  color: #63613F;
+  width: 130px;
+}
+.unit-status-popup > .content > .status-container > section > .content > .bar-container > .bar-wrap {
+  position: relative;
+  width: 100%;
+  height: 12px;
+  margin-top: 16px;
+  border: 1px solid #63613F;
+}
+.unit-status-popup > .content > .status-container > section > .content > .bar-container > .bar-wrap > label {
+  position: absolute;
+  top: -16px;
+  font-family: 'Trajan Pro Bold';
+  color: #b4b58f;
+  text-shadow: -1px -1px 0 #110d09, 1px -1px 0 #110d09, -1px 1px 0 #110d09, 1px 1px 0 #110d09;
+}
+.unit-status-popup > .content > .status-container > section > .content > .bar-container > .bar-wrap > .bar {
+  width: 30%;
+  height: 12px;
+  background-color: #e1e2b5;
+}
+.unit-status-popup > .content > .status-container > section > .skill-content {
+  display: flex;
+  margin-top: 16px;
+  gap: 8px;
+}
+.unit-status-popup > .content > .status-container > section > .skill-content > img {
+  height: 72px;
+}
+.unit-status-popup > .content > .status-container > hr {
+  border: none;
+  height: 1px;
+  background-color: #63613F;
+}
+.login-popup {
+  background-image: url("/images/ui/login-popup.png");
+  background-size: 100% 100%;
+  width: 805px;
+  height: 768px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.login-popup > .top {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.login-popup > .top > h5 {
+  margin-top: 6px;
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  font-size: 32px;
+}
+.login-popup > .top > h6 {
+  margin-top: 12px;
+  font-family: 'Trajan Pro Bold';
+  color: #878685;
+  font-size: 14px;
+}
+.login-popup > .top > a {
+  position: relative;
+  height: 40px;
+}
+.login-popup > .top > a > img {
+  height: 40px;
+}
+.login-popup > .content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.login-popup > .content > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 750px;
+  width: 100%;
+  background-color: #364193;
+  color: #fff;
+  padding: 16px 24px;
+  font-size: 24px;
+  font-family: 'Trajan Pro Bold';
+  border: 1px solid #5b5a36;
+}
+.login-popup > .content > a > img {
+  margin-right: 48px;
+}
+.login-popup > .bottom {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.login-popup > .bottom > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 225px;
+  width: 100%;
+  height: 69px;
+  border: 1px solid #5b5a36;
+  font-family: 'Trajan Pro Regular';
+  color: #e1e2b5;
+}
+

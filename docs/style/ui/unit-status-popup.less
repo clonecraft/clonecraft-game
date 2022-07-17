@@ -1,0 +1,147 @@
+.unit-status-popup {
+    background-image: url("/images/ui/popup.png");
+    background-size : 100% 100%;
+    width           : 1000px;
+    height          : 620px;
+    position        : relative;
+
+    >.top {
+        display        : flex;
+        text-align     : center;
+        align-items    : center;
+        justify-content: space-between;
+
+        >h6 {
+            margin-top : 6px;
+            font-family: 'Trajan Pro Bold';
+            color      : #e1e2b5;
+            font-size  : 24px;
+        }
+
+        >a {
+            height: 40px;
+
+            >img {
+                height: 40px;
+            }
+        }
+    }
+
+    >.content {
+        display: flex;
+
+        >.character-container {
+            width      : 40%;
+            margin-top : 16px;
+            margin-left: 32px;
+
+            >.character {
+                width : 200px;
+                height: 200px;
+            }
+
+            >.slot-container {
+                display              : grid;
+                grid-template-columns: auto auto auto auto;
+
+                >.slot {
+                    width: 100%;
+                }
+            }
+
+            >a {
+                font-family     : 'Trajan Pro Bold';
+                color           : #e1e2b5;
+                display         : block;
+                margin-top      : 12px;
+                padding         : 12px 0px;
+                max-width       : 150px;
+                text-align      : center;
+                background-image: url("/images/ui/info-button.png");
+            }
+        }
+
+        >.status-container {
+            margin-top : 16px;
+            margin-left: 32px;
+            width      : 50%;
+            overflow-y : scroll;
+            max-height : 500px;
+
+            >section {
+                >h6 {
+                    font-size  : 21px;
+                    font-family: 'Trajan Pro Bold';
+                    color      : #e1e2b5;
+                }
+
+                >.content {
+
+                    >.bar-container {
+                        display        : flex;
+                        justify-content: center;
+                        align-items    : center;
+                        margin-top     : 16px;
+
+                        >.img-wrap {
+                            width: 130px;
+
+                            >img {
+                                height: 40px;
+                            }
+                        }
+
+                        >p {
+                            font-size  : 14px;
+                            font-family: 'Trajan Pro Bold';
+                            color      : #63613F;
+                            width      : 130px;
+                        }
+
+                        >.bar-wrap {
+                            position  : relative;
+                            width     : 100%;
+                            height    : 12px;
+                            margin-top: 16px;
+                            border    : 1px solid #63613F;
+
+                            >label {
+                                position   : absolute;
+                                top        : -16px;
+                                font-family: 'Trajan Pro Bold';
+                                color      : #b4b58f;
+                                text-shadow:
+                                    -1px -1px 0 #110d09,
+                                    1px -1px 0 #110d09,
+                                    -1px 1px 0 #110d09,
+                                    1px 1px 0 #110d09;
+                            }
+
+                            >.bar {
+                                width           : 30%;
+                                height          : 12px;
+                                background-color: #e1e2b5;
+                            }
+                        }
+                    }
+                }
+
+                >.skill-content {
+                    display   : flex;
+                    margin-top: 16px;
+                    gap       : 8px;
+
+                    >img {
+                        height: 72px;
+                    }
+                }
+            }
+
+            >hr {
+                border          : none;
+                height          : 1px;
+                background-color: #63613F;
+            }
+        }
+    }
+}

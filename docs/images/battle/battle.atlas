@@ -1,0 +1,6 @@
+battle.png
+size:2048,256
+demo/Battle Start
+bounds:0,0,1139,192
+demo/sword
+bounds:1139,7,72,185

@@ -1,0 +1,245 @@
+.battle {
+    width: 100%;
+
+    >.content {
+        >header {
+            background-image: url("/images/battle/top.png");
+            padding-left    : 32px;
+            padding-top     : 8px;
+            padding-bottom  : 8px;
+            margin-top      : 1px;
+        }
+
+        >main {
+            display        : flex;
+            justify-content: space-between;
+            height         : 97vh;
+
+            >.player-container,
+            .enemy-container {
+                display         : flex;
+                flex-direction  : column;
+                align-items     : center;
+                background-image: url("/images/battle/playerPannel.png");
+                max-width       : 202px;
+                width           : 100%;
+                max-height      : 1080px;
+                height          : 100%;
+
+                >.profile {
+                    margin-top      : 16px;
+                    background-image: url("/images/battle/FairySlot.png");
+                    width           : 134px;
+                    height          : 134px;
+                    margin-bottom   : 32px;
+
+                    >img {
+                        width : 134px;
+                        height: 134px;
+                    }
+                }
+
+                >.clone-container {
+                    display       : flex;
+                    flex-direction: column;
+
+                    >.clone-slot {
+                        >.profile {
+                            margin-top      : 16px;
+                            background-image: url("/images/battle/smallCloneSlot.png");
+                            width           : 156px;
+                            height          : 156px;
+
+                            >img {
+                                width : 156px;
+                                height: 156px;
+                            }
+                        }
+
+                        >.hpbar-container {
+                            background-image: url("/images/battle/hpbarSmall.png");
+                            width           : 156px;
+                            height          : 15px;
+
+                            >.bar {
+                                background-color: #d6cebe;
+                                max-width       : 156px;
+                                width           : 30%;
+                                height          : 13px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            >.battle-container {
+                width: 100%;
+
+                >header {
+                    display        : flex;
+                    justify-content: space-between;
+                    padding        : 16px;
+
+                    >.name {
+                        margin-top : 40px;
+                        font-family: 'Trajan Pro Bold';
+                        font-size  : 30px;
+                        color      : #e1e2b5;
+                    }
+                }
+
+                >main {
+                    display        : flex;
+                    flex-direction : column;
+                    align-items    : center;
+                    justify-content: center;
+                    margin         : auto;
+
+                    >.top-container {
+                        width          : 100%;
+                        display        : flex;
+                        justify-content: center;
+
+                        >.slot-container {
+                            display: flex;
+                            gap    : 20px;
+
+                            >.large-clone-slot {
+                                >.profile {
+                                    margin-top      : 16px;
+                                    background-image: url("/images/battle/CloneSlot.png");
+                                    width           : 232px;
+                                    height          : 232px;
+
+                                    >img {
+                                        width : 232px;
+                                        height: 232px;
+                                    }
+                                }
+
+                                >.hpbar-container {
+                                    background-image: url("/images/battle/hpBar.png");
+                                    width           : 232px;
+                                    height          : 22px;
+
+                                    >.bar {
+                                        background-color: #d6cebe;
+                                        max-width       : 232px;
+                                        width           : 30%;
+                                        height          : 20px;
+                                    }
+                                }
+                            }
+
+                            >.clone-slot {
+
+                                >.profile {
+                                    margin-top      : 16px;
+                                    background-image: url("/images/battle/smallCloneSlot.png");
+                                    width           : 156px;
+                                    height          : 156px;
+
+                                    >img {
+                                        width : 156px;
+                                        height: 156px;
+                                    }
+                                }
+
+                                >.hpbar-container {
+                                    background-image: url("/images/battle/hpbarSmall.png");
+                                    width           : 156px;
+                                    height          : 15px;
+
+                                    >.bar {
+                                        background-color: #d6cebe;
+                                        max-width       : 156px;
+                                        width           : 30%;
+                                        height          : 13px;
+                                    }
+                                }
+                            }
+                        }
+
+                        >.image-container {
+                            padding: 0px 72px;
+                        }
+                    }
+
+                    >.clone-container {
+                        display: flex;
+
+                        >.log-container {
+                            width           : 471px;
+                            height          : 585px;
+                            background-image: url("/images/battle/battle-log.png");
+                            padding-top     : 72px;
+                            padding-left    : 32px;
+                            margin          : 0px 32px;
+
+                            >p {
+                                margin-top : 4px;
+                                font-family: 'NanumMyeongjo';
+                            }
+                        }
+
+                        >.sub-container {
+                            >.slot-container {
+                                display              : grid;
+                                gap                  : 20px;
+                                grid-template-columns: repeat(3, 1fr);
+
+                                >.clone-slot {
+                                    >.profile {
+                                        margin-top      : 16px;
+                                        background-image: url("/images/battle/smallCloneSlot.png");
+                                        width           : 156px;
+                                        height          : 156px;
+
+                                        >img {
+                                            width : 156px;
+                                            height: 156px;
+                                        }
+                                    }
+
+                                    >.hpbar-container {
+                                        background-image: url("/images/battle/hpbarSmall.png");
+                                        width           : 156px;
+                                        height          : 15px;
+
+                                        >.bar {
+                                            background-color: #d6cebe;
+                                            max-width       : 156px;
+                                            width           : 30%;
+                                            height          : 13px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            >.property-container {
+                                display              : grid;
+                                gap                  : 20px;
+                                grid-template-columns: repeat(3, 1fr);
+                                margin-top           : 16px;
+
+                                >.image-container {
+                                    display        : flex;
+                                    justify-content: center;
+                                    align-items    : center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            >.enemy-container {
+                background-image: url("/images/battle/enemyPannel.png");
+                max-width       : 202px;
+                width           : 100%;
+                max-height      : 1080px;
+                height          : 100%;
+            }
+        }
+    }
+}

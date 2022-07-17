@@ -1,0 +1,89 @@
+.login-popup {
+    background-image: url("/images/ui/login-popup.png");
+    background-size : 100% 100%;
+    width           : 805px;
+    height          : 768px;
+    position        : relative;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : space-between;
+
+    >.top {
+        margin-top     : 32px;
+        display        : flex;
+        flex-direction : column;
+        text-align     : center;
+        align-items    : center;
+        justify-content: center;
+
+        >h5 {
+            margin-top : 6px;
+            font-family: 'Trajan Pro Bold';
+            color      : #e1e2b5;
+            font-size  : 32px;
+        }
+
+        >h6 {
+            margin-top : 12px;
+            font-family: 'Trajan Pro Bold';
+            color      : rgb(135, 134, 133);
+            font-size  : 14px;
+        }
+
+        >a {
+            position: relative;
+            height  : 40px;
+
+            >img {
+                height: 40px;
+            }
+        }
+    }
+
+    >.content {
+        display        : flex;
+        flex-direction : column;
+        text-align     : center;
+        align-items    : center;
+        justify-content: center;
+
+        >a {
+            >img {
+                margin-right: 48px;
+            }
+
+            display         : flex;
+            align-items     : center;
+            justify-content : center;
+            max-width       : 750px;
+            width           : 100%;
+            background-color: rgb(54, 65, 147);
+            color           : #fff;
+            padding         : 16px 24px;
+            font-size       : 24px;
+            font-family     : 'Trajan Pro Bold';
+            border          : 1px solid rgb(91, 90, 54);
+        }
+    }
+
+    >.bottom {
+        display        : flex;
+        flex-direction : column;
+        text-align     : center;
+        align-items    : center;
+        justify-content: center;
+        margin-bottom  : 24px;
+
+        >a {
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+            max-width      : 225px;
+            width          : 100%;
+            height         : 69px;
+            border         : 1px solid rgb(91, 90, 54);
+            font-family    : 'Trajan Pro Regular';
+            color          : #e1e2b5;
+        }
+    }
+}

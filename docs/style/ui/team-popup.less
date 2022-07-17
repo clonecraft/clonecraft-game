@@ -1,0 +1,222 @@
+.team-popup {
+    background-image: url("/images/ui/popup.png");
+    background-size : 100% 100%;
+    width           : 1000px;
+    height          : 600px;
+    position        : relative;
+
+    >.top {
+        display        : flex;
+        text-align     : center;
+        align-items    : center;
+        justify-content: space-between;
+
+        >h6 {
+            margin-top : 6px;
+            font-family: 'Trajan Pro Bold';
+            color      : #e1e2b5;
+            font-size  : 24px;
+        }
+
+        >a {
+            height: 40px;
+
+            >img {
+                height: 40px;
+            }
+        }
+    }
+
+    >.content {
+        display: flex;
+
+        >.my-panel {
+            display        : flex;
+            flex-direction : row;
+            justify-content: space-between;
+            width          : 100%;
+            margin-top     : 16px;
+
+            >.slot-container {
+                width: 100%;
+
+                >.my-container {
+                    display        : flex;
+                    justify-content: space-between;
+                    width          : 100%;
+                    max-width      : 400px;
+
+                    >.preset-container {
+                        display       : flex;
+                        flex-direction: column;
+                        min-width     : 100px;
+
+                        >a {
+                            font-family  : 'Trajan Pro Regular';
+                            color        : #e1e2b5;
+                            border       : 1px solid #63613F;
+                            border-radius: 2px;
+                            padding      : 12px 8px;
+                            margin-top   : 8px;
+
+                            &:hover {
+                                background-color: #857552;
+                                color           : #FFF;
+                            }
+                        }
+                    }
+
+                    >.slot-container {
+                        display: flex;
+
+                        >.character-container {
+                            display        : flex;
+                            flex-direction : column;
+                            align-items    : center;
+                            justify-content: center;
+                            margin-left    : 30px;
+
+                            >.property {
+                                display      : flex;
+                                align-items  : center;
+                                margin-left  : 4px;
+                                font-size    : 24px;
+                                font-family  : 'Trajan Pro Bold';
+                                color        : #e1e2b5;
+                                margin-bottom: 16px;
+
+                                >img {
+                                    width : 70%;
+                                    height: 70%;
+                                }
+
+                                >p {
+                                    margin-left: 16px;
+                                }
+                            }
+
+                            >.character-line {
+                                max-height: 400px;
+                                overflow-y: scroll;
+
+                                >img {
+                                    width : 100px;
+                                    height: 100px;
+                                    border: 1px solid #857552;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                >.info-container {
+                    display    : flex;
+                    border     : 1px solid #857552;
+                    margin-top : 16px;
+                    margin-left: 8px;
+
+                    >.profile-wrap {
+                        width : 100px;
+                        height: 100px;
+                        border: 1px solid #857552;
+                    }
+
+                    >.content {
+                        margin-top : 12px;
+                        margin-left: 12px;
+
+                        >h6 {
+                            font-size  : 24px;
+                            font-family: 'Trajan Pro Bold';
+                            color      : #e1e2b5;
+                        }
+
+                        >.effect-container {
+                            margin-top: 8px;
+
+                            >p {
+                                font-family: 'NanumMyeongjo Bold';
+                                color      : #e1e2b5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        >.collection-container {
+            display        : flex;
+            flex-direction : column;
+            justify-content: space-between;
+            width          : 100%;
+            margin-top     : 16px;
+            border         : 1px solid #857552;
+            margin-left    : 20px;
+            margin-right   : 10px;
+            padding        : 8px;
+
+            >.character-container {
+                position        : relative;
+                display         : flex;
+                flex-wrap       : wrap;
+                width           : 100%;
+                height          : 100%;
+                background-color: #000;
+                gap             : 8px;
+
+                >img {
+                    width : 100px;
+                    height: 100px;
+                    border: 1px solid #857552;
+                }
+
+                ::-webkit-scrollbar {
+                    width: 14px;
+                }
+
+                ::-webkit-scrollbar-thumb {
+                    background: #e1e2b5;
+                }
+            }
+
+            >.check-container {
+                display   : flex;
+                margin-top: 8px;
+                gap       : 16px;
+
+                >.checkbox-container {
+                    display        : flex;
+                    text-align     : center;
+                    justify-content: center;
+                    align-items    : center;
+                    color          : #e1e2b5;
+                    font-family    : 'Trajan Pro Regular';
+
+                    >label {
+                        margin-left: 4px;
+                    }
+                }
+            }
+
+            >.button-container {
+                position: absolute;
+                display : flex;
+                gap     : 16px;
+                bottom  : 25px;
+
+                >a {
+                    background : rgba(29, 27, 24, 0.9);
+                    color      : #e1e2b5;
+                    font-family: 'Trajan Pro Regular';
+                    border     : 1px solid #857552;
+                    padding    : 8px 32px;
+
+                    &:hover {
+                        background: rgba(133, 117, 82, 0.9);
+                        color     : #FFF;
+                    }
+                }
+            }
+        }
+    }
+}
