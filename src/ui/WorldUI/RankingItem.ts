@@ -5,13 +5,13 @@ export default class RnakingItem extends DomNode {
         super(".ranking-item");
         this.append(
             el(".item-container",
-            el(".info-container",
-                el(".ranking", "4"),
-                el("img", {src: "/images/character/character1.jpeg", alt: "mock" }),
-                el(".address", "0XDF...F1AD"),
+                el(".info-container",
+                    el(".ranking", "4"),
+                    el("img", { src: "/images/character/character1.jpeg", alt: "mock" }),
+                    el(".address", "0XDF...F1AD"),
+                ),
+                el("p", "15233"),
             ),
-            el("p", "15233"),
-            )
-        )
+        );
     }
 }
