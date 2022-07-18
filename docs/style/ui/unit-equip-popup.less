@@ -1,0 +1,130 @@
+.unit-equip-popup {
+    background-image: url("/images/ui/popup.png");
+    background-size : 100% 100%;
+    width           : 1000px;
+    height          : 620px;
+    position        : relative;
+
+    >.top {
+        display        : flex;
+        text-align     : center;
+        align-items    : center;
+        justify-content: space-between;
+
+        >h6 {
+            margin-top : 6px;
+            font-family: 'Trajan Pro Bold';
+            color      : #e1e2b5;
+            font-size  : 24px;
+        }
+
+        >a {
+            height: 40px;
+
+            >img {
+                height: 40px;
+            }
+        }
+    }
+
+    >.content {
+        display: flex;
+
+        >.character-container {
+            width      : 40%;
+            margin-top : 16px;
+            margin-left: 32px;
+
+            >.character {
+                width : 200px;
+                height: 200px;
+            }
+
+            >.slot-container {
+                display              : grid;
+                grid-template-columns: auto auto auto auto;
+
+                >.slot {
+                    width: 100%;
+                }
+            }
+
+            >.tab-container {
+                display: flex;
+
+                >a {
+                    font-family     : 'Trajan Pro Bold';
+                    color           : #e1e2b5;
+                    display         : block;
+                    margin-top      : 12px;
+                    padding         : 12px 0px;
+                    max-width       : 150px;
+                    width           : 100%;
+                    text-align      : center;
+                    background-image: url("/images/ui/info-button.png");
+                }
+            }
+        }
+
+        >.equip-container {
+            display    : flex;
+            margin-top : 16px;
+            margin-left: 16px;
+            width      : 50%;
+            overflow-y : scroll;
+            max-height : 500px;
+
+            >.tab-container {
+                display       : flex;
+                flex-direction: column;
+
+                >a {
+                    padding    : 12px 8px;
+                    border     : 1px solid rgb(87, 76, 55);
+                    font-family: 'Trajan Pro Regular';
+                    color      : #e1e2b5;
+                    font-size  : 12px;
+
+                    &:hover {
+                        background-color: rgb(136, 116, 73);
+                    }
+                }
+            }
+
+            >section {
+                display    : flex;
+                flex-wrap  : wrap;
+                gap        : 8px;
+                margin-left: 8px;
+
+                >.item {
+                    display       : flex;
+                    flex-direction: column;
+
+
+                    >img {
+                        width: 115px;
+                    }
+
+                    >a {
+                        margin-top     : 4px;
+                        display        : flex;
+                        justify-content: center;
+                        align-items    : center;
+                        font-family    : 'Trajan Pro Regular';
+                        color          : #e1e2b5;
+                        font-size      : 12px;
+                        padding        : 4px;
+                        border         : 1px solid rgb(87, 76, 55);
+                    }
+                }
+            }
+
+            >hr {
+                border          : none;
+                height          : 1px;
+                background-color: #63613F;
+            }
+        }
+    }
+}

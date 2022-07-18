@@ -1104,6 +1104,115 @@ input {
   height: 1px;
   background-color: #63613F;
 }
+.unit-equip-popup {
+  background-image: url("/images/ui/popup.png");
+  background-size: 100% 100%;
+  width: 1000px;
+  height: 620px;
+  position: relative;
+}
+.unit-equip-popup > .top {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.unit-equip-popup > .top > h6 {
+  margin-top: 6px;
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  font-size: 24px;
+}
+.unit-equip-popup > .top > a {
+  height: 40px;
+}
+.unit-equip-popup > .top > a > img {
+  height: 40px;
+}
+.unit-equip-popup > .content {
+  display: flex;
+}
+.unit-equip-popup > .content > .character-container {
+  width: 40%;
+  margin-top: 16px;
+  margin-left: 32px;
+}
+.unit-equip-popup > .content > .character-container > .character {
+  width: 200px;
+  height: 200px;
+}
+.unit-equip-popup > .content > .character-container > .slot-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+.unit-equip-popup > .content > .character-container > .slot-container > .slot {
+  width: 100%;
+}
+.unit-equip-popup > .content > .character-container > .tab-container {
+  display: flex;
+}
+.unit-equip-popup > .content > .character-container > .tab-container > a {
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  display: block;
+  margin-top: 12px;
+  padding: 12px 0px;
+  max-width: 150px;
+  width: 100%;
+  text-align: center;
+  background-image: url("/images/ui/info-button.png");
+}
+.unit-equip-popup > .content > .equip-container {
+  display: flex;
+  margin-top: 16px;
+  margin-left: 16px;
+  width: 50%;
+  overflow-y: scroll;
+  max-height: 500px;
+}
+.unit-equip-popup > .content > .equip-container > .tab-container {
+  display: flex;
+  flex-direction: column;
+}
+.unit-equip-popup > .content > .equip-container > .tab-container > a {
+  padding: 12px 8px;
+  border: 1px solid #574c37;
+  font-family: 'Trajan Pro Regular';
+  color: #e1e2b5;
+  font-size: 12px;
+}
+.unit-equip-popup > .content > .equip-container > .tab-container > a:hover {
+  background-color: #887449;
+}
+.unit-equip-popup > .content > .equip-container > section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-left: 8px;
+}
+.unit-equip-popup > .content > .equip-container > section > .item {
+  display: flex;
+  flex-direction: column;
+}
+.unit-equip-popup > .content > .equip-container > section > .item > img {
+  width: 115px;
+}
+.unit-equip-popup > .content > .equip-container > section > .item > a {
+  margin-top: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Trajan Pro Regular';
+  color: #e1e2b5;
+  font-size: 12px;
+  padding: 4px;
+  border: 1px solid #574c37;
+}
+.unit-equip-popup > .content > .equip-container > hr {
+  border: none;
+  height: 1px;
+  background-color: #63613F;
+}
 .login-popup {
   background-image: url("/images/ui/login-popup.png");
   background-size: 100% 100%;
