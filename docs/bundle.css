@@ -1183,4 +1183,68 @@ input {
   font-family: 'Trajan Pro Regular';
   color: #e1e2b5;
 }
+.mint-popup {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.mint-popup > .info-container {
+  background-color: #1a1717;
+  padding: 30px 42px;
+  border: 1px solid #888872;
+}
+.mint-popup > .info-container > h5 {
+  text-align: center;
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  font-size: 28px;
+  padding-bottom: 8px;
+}
+.mint-popup > .info-container > p {
+  margin-top: 16px;
+  font-family: 'NanumMyeongjo';
+  color: #888872;
+}
+.mint-popup > .mint-container {
+  margin-top: 32px;
+  width: 70%;
+  background-color: #1a1717;
+  border: 1px solid #888872;
+}
+.mint-popup > .mint-container > .content {
+  background: url("/images/ui/popupBack.png");
+  padding: 30px 42px;
+}
+.mint-popup > .mint-container > .content > h5 {
+  text-align: center;
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  font-size: 28px;
+  padding-bottom: 8px;
+}
+.mint-popup > .mint-container > .content > p {
+  margin-top: 16px;
+  font-family: 'NanumMyeongjo';
+  color: #e1e2b5;
+}
+.mint-popup > .mint-container > .content > input {
+  width: 100%;
+  padding: 16px;
+  margin-top: 24px;
+  background-color: #000;
+  border: 1px solid #888872;
+}
+.mint-popup > .mint-container > a {
+  display: flex;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  font-family: 'Trajan Pro Bold';
+  font-size: 20px;
+  padding: 16px 0px;
+  color: #fff;
+  width: 100%;
+  background-color: #1a1717;
+  border-top: 1px solid #888872;
+}
 
