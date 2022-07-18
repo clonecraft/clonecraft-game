@@ -1,0 +1,66 @@
+.clones-popup {
+    background-image: url("/images/ui/popup.png");
+    background-size : 100% 100%;
+    width           : 1000px;
+    height          : 600px;
+    position        : relative;
+
+    >.top {
+        display        : flex;
+        text-align     : center;
+        align-items    : center;
+        justify-content: space-between;
+
+        >h6 {
+            margin-top : 6px;
+            font-family: 'Trajan Pro Bold';
+            color      : #e1e2b5;
+            font-size  : 24px;
+        }
+
+        >a {
+            height: 40px;
+
+            >img {
+                height: 40px;
+            }
+        }
+    }
+
+
+    >.content {
+        display  : flex;
+        flex-wrap: wrap;
+        padding  : 8px 16px;
+        gap      : 8px;
+
+        >.clone-slot {
+            width         : 183px;
+            height        : 229px;
+            display       : flex;
+            flex-direction: column;
+            background    : url("/images/ui/clones-slot.png");
+
+            >img {
+                padding: 1px;
+                width  : 183px;
+                height : 183px;
+            }
+
+            >.text-container {
+                padding    : 8px;
+                font-family: 'Trajan Pro Regular';
+
+                >p {
+                    font-size: 14px;
+                    color    : #e1e2b5;
+                }
+
+                >.id {
+                    text-align: right;
+                    color     : #e1e2b5;
+                }
+            }
+        }
+    }
+}

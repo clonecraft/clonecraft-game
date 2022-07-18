@@ -1,7 +1,7 @@
 import { GameNode, ImageNode, WebSocketClient } from "skydapp-browser";
 import Config from "../Config";
+import ClonesPopup from "../ui/ClonesPopup";
 import LoginPopup from "../ui/LoginPopup";
-import MintPopup from "../ui/MintPopup";
 import WorldUI from "../ui/WorldUI";
 
 export default class World extends GameNode {
@@ -9,7 +9,7 @@ export default class World extends GameNode {
     // private client = new WebSocketClient(`wss://${Config.backendHost}`);
 
     private loginPopup: LoginPopup | undefined;
-    private mintPopup: MintPopup | undefined;
+    private clonesPopup: ClonesPopup | undefined;
     public ui: WorldUI | undefined;
 
     constructor() {
@@ -18,7 +18,7 @@ export default class World extends GameNode {
         let testMap;
         this.append(
             testMap = new ImageNode(0, 0, "/images/map.png"),
-            this.mintPopup = new MintPopup()
+            this.clonesPopup = new ClonesPopup()
         );
         testMap.scale = 3;
 

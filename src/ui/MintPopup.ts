@@ -1,5 +1,4 @@
 import { DomNode, el, FixedNode } from "skydapp-browser";
-import Config from "../Config";
 
 export default class MintPopup extends FixedNode {
 

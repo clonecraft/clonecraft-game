@@ -1247,4 +1247,59 @@ input {
   background-color: #1a1717;
   border-top: 1px solid #888872;
 }
+.clones-popup {
+  background-image: url("/images/ui/popup.png");
+  background-size: 100% 100%;
+  width: 1000px;
+  height: 600px;
+  position: relative;
+}
+.clones-popup > .top {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.clones-popup > .top > h6 {
+  margin-top: 6px;
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  font-size: 24px;
+}
+.clones-popup > .top > a {
+  height: 40px;
+}
+.clones-popup > .top > a > img {
+  height: 40px;
+}
+.clones-popup > .content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px 16px;
+  gap: 8px;
+}
+.clones-popup > .content > .clone-slot {
+  width: 183px;
+  height: 229px;
+  display: flex;
+  flex-direction: column;
+  background: url("/images/ui/clones-slot.png");
+}
+.clones-popup > .content > .clone-slot > img {
+  padding: 1px;
+  width: 183px;
+  height: 183px;
+}
+.clones-popup > .content > .clone-slot > .text-container {
+  padding: 8px;
+  font-family: 'Trajan Pro Regular';
+}
+.clones-popup > .content > .clone-slot > .text-container > p {
+  font-size: 14px;
+  color: #e1e2b5;
+}
+.clones-popup > .content > .clone-slot > .text-container > .id {
+  text-align: right;
+  color: #e1e2b5;
+}
 
