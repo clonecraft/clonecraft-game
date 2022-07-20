@@ -1,1 +1,1 @@
-{"version":3,"file":"TeamPopup.d.ts","sourceRoot":"","sources":["../../src/popup/TeamPopup.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAM,SAAS,EAAE,MAAM,iBAAiB,CAAC;AAGzD,MAAM,CAAC,OAAO,OAAO,SAAU,SAAQ,SAAS;IAErC,OAAO,EAAE,OAAO,CAAC;;CA+F3B"}
+{"version":3,"file":"TeamPopup.d.ts","sourceRoot":"","sources":["../../src/popup/TeamPopup.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAM,SAAS,EAAE,MAAM,iBAAiB,CAAC;AAIzD,MAAM,CAAC,OAAO,OAAO,SAAU,SAAQ,SAAS;IAErC,OAAO,EAAE,OAAO,CAAC;IACxB,OAAO,CAAC,aAAa,CAAU;;YA8FjB,IAAI;CAarB"}

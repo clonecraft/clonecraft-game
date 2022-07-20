@@ -85,9 +85,11 @@ class CloneCraft {
     }
 
     public async testCNDV3Mint() {
-        if (this.currentUserInfo !== undefined) {
-            return this.client.send("test-cnd-v3-mint", this.currentUserInfo.id);
-        }
+        return this.client.send("test-cnd-v3-mint");
+    }
+
+    public async loadAllClones() {
+        return this.client.send("load-all-clones");
     }
 }
 

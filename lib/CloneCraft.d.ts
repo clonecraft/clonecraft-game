@@ -11,6 +11,7 @@ declare class CloneCraft {
     start(): void;
     checkDiscordLogin(): Promise<boolean>;
     testCNDV3Mint(): Promise<any>;
+    loadAllClones(): Promise<any>;
 }
 declare const _default: CloneCraft;
 export default _default;

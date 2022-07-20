@@ -772,7 +772,7 @@ input {
   background-color: #000;
   gap: 8px;
 }
-.team-popup > .content > .collection-container > .character-container > img {
+.team-popup > .content > .collection-container > .character-container > a > img {
   width: 100px;
   height: 100px;
   border: 1px solid #857552;

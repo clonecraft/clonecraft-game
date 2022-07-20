@@ -1,9 +1,11 @@
 import { DomNode, el, FixedNode } from "skydapp-browser";
+import CloneCraft from "../CloneCraft";
 import UnitStatusPopup from "./UnitStatusPopup";
 
 export default class TeamPopup extends FixedNode {
 
     public content: DomNode;
+    private characterList: DomNode;
 
     constructor() {
         super(0, 0);
@@ -75,10 +77,7 @@ export default class TeamPopup extends FixedNode {
                         ),
                     ),
                     el(".collection-container",
-                        el(".character-container",
-                            el("img", { src: "/images/character/character1.jpeg", alt: "character" }),
-                            el("img", { src: "/images/character/character2.jpeg", alt: "character" }),
-                        ),
+                        this.characterList = el(".character-container"),
                         el(".check-container",
                             el(".checkbox-container",
                                 el("input", { type: "checkbox" }),
@@ -97,5 +96,20 @@ export default class TeamPopup extends FixedNode {
                 )
             ),
         );
+        this.load();
+    }
+
+    private async load() {
+        const clones = await CloneCraft.loadAllClones();
+        this.characterList.empty();
+        for (const clone of clones) {
+            this.characterList.append(
+                el("a", el("img", { src: "/images/character/character1.jpeg", alt: "character" }), {
+                    click: () => {
+                        new UnitStatusPopup().appendTo(CloneCraft.screen.root);
+                    },
+                }),
+            );
+        }
     }
 }
