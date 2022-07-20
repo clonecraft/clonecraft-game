@@ -1,11 +1,9 @@
-import { GameNode, ImageNode, WebSocketClient } from "skydapp-browser";
-import Config from "../Config";
-import LoginPopup from "../ui/LoginPopup";
+import { GameNode, ImageNode } from "skydapp-browser";
+import CloneCraft from "../CloneCraft";
+import LoginPopup from "../popup/LoginPopup";
 import WorldUI from "../ui/WorldUI";
 
 export default class World extends GameNode {
-
-    // private client = new WebSocketClient(`wss://${Config.backendHost}`);
 
     private loginPopup: LoginPopup | undefined;
     public ui: WorldUI | undefined;
@@ -19,27 +17,17 @@ export default class World extends GameNode {
         );
         testMap.scale = 3;
 
-        // this.client.on("connect", () => {
-        //     this.fireEvent("connect");
-        // });
-
-        // this.client.on("disconnect", () => {
-        //     console.log("disconnected.");
-        //     // 접속이 끊어지면 자동 재접속
-        //     this.client.reconnect();
-        // });
+        this.init();
     }
 
-    public showWorldUI() {
-        this.loginPopup?.delete();
-        this.ui?.delete();
-        this.append(this.ui = new WorldUI());
-        this.ui.repositeUI();
-    }
-
-    public showLoginPopup() {
-        this.loginPopup?.delete();
-        this.ui?.delete();
-        this.append(this.loginPopup = new LoginPopup());
+    private async init() {
+        if (await CloneCraft.checkDiscordLogin()) {
+            this.append(this.ui = new WorldUI());
+            this.ui.repositeUI();
+            this.ui.on("delete", () => this.ui = undefined);
+        } else {
+            this.append(this.loginPopup = new LoginPopup());
+            this.loginPopup.on("delete", () => this.loginPopup = undefined);
+        }
     }
 }

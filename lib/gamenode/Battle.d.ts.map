@@ -1,0 +1,1 @@
+{"version":3,"file":"Battle.d.ts","sourceRoot":"","sources":["../../src/gamenode/Battle.ts"],"names":[],"mappings":"AAAA,OAAO,EAAS,OAAO,EAAM,QAAQ,EAAwB,MAAM,iBAAiB,CAAC;AACrF,OAAO,WAAW,MAAM,sBAAsB,CAAC;AAE/C,MAAM,CAAC,OAAO,OAAO,MAAO,SAAQ,QAAQ;IAEjC,KAAK,EAAE,WAAW,GAAG,SAAS,CAAC;IAC/B,OAAO,EAAE,OAAO,CAAC;;CA+M3B"}

@@ -238,6 +238,10 @@ input {
   width: 128px;
   height: 115px;
 }
+.tool-panel > .mint {
+  background-image: url("/images/ui/team-button.png");
+  background-size: 100% 100%;
+}
 .tool-panel > .team {
   background-image: url("/images/ui/team-button.png");
   background-size: 100% 100%;
@@ -1342,6 +1346,7 @@ input {
   margin-top: 24px;
   background-color: #000;
   border: 1px solid #888872;
+  color: #fff;
 }
 .mint-popup > .mint-container > a {
   display: flex;

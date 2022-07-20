@@ -1,5 +1,5 @@
 import { Delay, DomNode, el, GameNode, ImageNode, SpineNode } from "skydapp-browser";
-import BattlePopup from "../ui/BattlePopup";
+import BattlePopup from "../popup/BattlePopup";
 
 export default class Battle extends GameNode {
 

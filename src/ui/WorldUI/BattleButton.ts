@@ -1,6 +1,6 @@
 import { el, GameNode } from "skydapp-browser";
 import { SkyRouter } from "skydapp-common";
-import BattlePopup from "../BattlePopup";
+import BattlePopup from "../../popup/BattlePopup";
 
 export default class BattleButton extends GameNode {
 

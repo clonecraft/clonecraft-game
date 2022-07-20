@@ -1,29 +1,31 @@
 import { el, GameNode } from "skydapp-browser";
-import RankingPopup from "../RankingPopup";
-import TeamPopup from "../TeamPopup";
+import CloneCraft from "../../CloneCraft";
+import MintPopup from "../../popup/MintPopup";
+import RankingPopup from "../../popup/RankingPopup";
+import TeamPopup from "../../popup/TeamPopup";
 
 export default class ToolPanel extends GameNode {
 
-    public width = 300;
+    public width = 100 * 4;
     public height = 126;
 
     constructor() {
         super(0, 0);
         this.dom = el(".tool-panel",
+            el("a.mint", {
+                click: () => {
+                    new MintPopup().appendTo(CloneCraft.screen.root);
+                },
+            }),
             el("a.team", {
                 click: () => {
-                    if (this.screen !== undefined) {
-                        new TeamPopup().appendTo(this.screen.root);
-                    }
+                    new TeamPopup().appendTo(CloneCraft.screen.root);
                 },
-            }
-            ),
+            }),
             el("a.explore"),
             el("a.stage", {
                 click: () => {
-                    if (this.screen !== undefined) {
-                        new RankingPopup().appendTo(this.screen.root);
-                    }
+                    new RankingPopup().appendTo(CloneCraft.screen.root);
                 },
             }),
         );

@@ -1,0 +1,1 @@
+{"version":3,"file":"WorldUI.d.ts","sourceRoot":"","sources":["../../src/ui/WorldUI.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAU,MAAM,iBAAiB,CAAC;AAMpD,MAAM,CAAC,OAAO,OAAO,OAAQ,SAAQ,SAAS;IAE1C,OAAO,CAAC,aAAa,CAAgB;IACrC,OAAO,CAAC,YAAY,CAAe;IACnC,OAAO,CAAC,UAAU,CAAa;IAC/B,OAAO,CAAC,SAAS,CAAY;;IAYtB,UAAU;CAQpB"}
