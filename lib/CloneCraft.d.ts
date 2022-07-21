@@ -1,17 +1,26 @@
 import { Fullscreen } from "skydapp-browser";
 import DiscordUserInfo from "./datamodel/DiscordUserInfo";
+import TeamInfo from "./datamodel/TeamInfo";
+import UniqueItem from "./datamodel/UniqueItem";
 declare class CloneCraft {
     private codeStore;
     screen: Fullscreen;
     private client;
     private firstConnectingPopup;
     private world;
+    private battle;
     private reconnectingPopup;
     currentUserInfo: DiscordUserInfo | undefined;
+    clones: UniqueItem[];
+    team: TeamInfo;
     start(): void;
     checkDiscordLogin(): Promise<boolean>;
-    testCNDV3Mint(): Promise<any>;
-    loadAllClones(): Promise<any>;
+    goBattle(): void;
+    goWorld(): void;
+    saveTeam(): Promise<void>;
+    removeCloneFromTeam(cloneId: string): void;
+    checkCloneIsInTeam(cloneId: string): boolean;
+    testCNDV3Mint(): Promise<void>;
 }
 declare const _default: CloneCraft;
 export default _default;

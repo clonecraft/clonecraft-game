@@ -1,0 +1,1 @@
+{"version":3,"file":"TeamInfo.d.ts","sourceRoot":"","sources":["../../src/datamodel/TeamInfo.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,WAAW,QAAQ;IAC7B,KAAK,EAAE;QACH,UAAU,EAAE,MAAM,CAAC;QACnB,OAAO,EAAE,MAAM,CAAC;KACnB,EAAE,EAAE,CAAC;CACT"}

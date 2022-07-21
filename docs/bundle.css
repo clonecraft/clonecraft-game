@@ -726,6 +726,11 @@ input {
   height: 100px;
   border: 1px solid #857552;
 }
+.team-popup > .content > .my-panel > .slot-container > .my-container > .team-container > .team-info > .slot-container > .slot > a > img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #857552;
+}
 .team-popup > .content > .my-panel > .slot-container > .info-container {
   display: flex;
   border: 1px solid #857552;

@@ -1,6 +1,9 @@
 import { Fullscreen, Store, WebSocketClient } from "skydapp-browser";
 import Config from "./Config";
 import DiscordUserInfo from "./datamodel/DiscordUserInfo";
+import TeamInfo from "./datamodel/TeamInfo";
+import UniqueItem from "./datamodel/UniqueItem";
+import Battle from "./gamenode/Battle";
 import World from "./gamenode/World";
 import FirstConnectingPopup from "./popup/FirstConnectingPopup";
 import ReconnectingPopup from "./popup/ReconnectingPopup";
@@ -13,9 +16,12 @@ class CloneCraft {
 
     private firstConnectingPopup: FirstConnectingPopup | undefined = new FirstConnectingPopup().appendTo(this.screen.root);
     private world: World | undefined;
+    private battle: Battle | undefined;
     private reconnectingPopup: ReconnectingPopup | undefined;
 
     public currentUserInfo: DiscordUserInfo | undefined;
+    public clones: UniqueItem[] = [];
+    public team: TeamInfo = { units: [] };
 
     public start() {
 
@@ -26,14 +32,13 @@ class CloneCraft {
             this.firstConnectingPopup?.delete();
             this.firstConnectingPopup = undefined;
             this.reconnectingPopup?.delete();
-            this.world?.delete();
-            this.world = new World().appendTo(this.screen.root);
-            this.world.on("delete", () => this.world = undefined);
+            this.goWorld();
         });
 
         this.client.on("disconnect", () => {
             console.log("disconnected from server.");
             this.world?.delete();
+            this.battle?.delete();
             if (this.firstConnectingPopup === undefined) {
                 this.reconnectingPopup?.delete();
                 this.reconnectingPopup = new ReconnectingPopup().appendTo(this.screen.root);
@@ -70,6 +75,9 @@ class CloneCraft {
                 if (this.currentUserInfo === undefined) {
                     throw new Error("Current User Not Exists.");
                 }
+                const data = await this.client.send("load-all");
+                this.clones = data.clones;
+                this.team = data.team;
                 return true;
             } catch (error) {
                 console.error(error);
@@ -84,12 +92,48 @@ class CloneCraft {
         }
     }
 
-    public async testCNDV3Mint() {
-        return this.client.send("test-cnd-v3-mint");
+    public goBattle() {
+        this.world?.delete();
+        this.battle?.delete();
+        this.battle = new Battle().appendTo(this.screen.root);
+        this.battle.on("delete", () => this.battle = undefined);
     }
 
-    public async loadAllClones() {
-        return this.client.send("load-all-clones");
+    public goWorld() {
+        this.world?.delete();
+        this.battle?.delete();
+        this.world = new World().appendTo(this.screen.root);
+        this.world.on("delete", () => this.world = undefined);
+    }
+
+    public async saveTeam() {
+        await this.client.send("save-team", this.team);
+    }
+
+    public removeCloneFromTeam(cloneId: string) {
+        for (const clones of this.team.units) {
+            for (const [index, clone] of clones.entries()) {
+                if (clone?.tokenId === cloneId) {
+                    (clones as any)[index] = null;
+                    break;
+                }
+            }
+        }
+    }
+
+    public checkCloneIsInTeam(cloneId: string) {
+        for (const clones of this.team.units) {
+            for (const clone of clones) {
+                if (clone?.tokenId === cloneId) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public async testCNDV3Mint() {
+        await this.client.send("test-cnd-v3-mint");
     }
 }
 

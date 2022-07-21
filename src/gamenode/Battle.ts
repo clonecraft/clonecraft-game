@@ -1,9 +1,8 @@
 import { Delay, DomNode, el, GameNode, ImageNode, SpineNode } from "skydapp-browser";
-import BattlePopup from "../popup/BattlePopup";
+import CloneCraft from "../CloneCraft";
 
 export default class Battle extends GameNode {
 
-    public popup: BattlePopup | undefined;
     public content: DomNode;
 
     constructor() {
@@ -14,6 +13,9 @@ export default class Battle extends GameNode {
                 el("header",
                     el("a",
                         el("img", { src: "/images/battle/back.png", alt: "back" }),
+                        {
+                            click: () => CloneCraft.goWorld(),
+                        },
                     ),
                 ),
                 el("main",
@@ -206,8 +208,6 @@ export default class Battle extends GameNode {
                 spine.fadeOut(0.002, () => {
                     spine.delete();
                 });
-                this.append(this.popup = new BattlePopup());
-                this.popup.fadeIn(0.002);
             }, 1000);
         });
     }

@@ -1,6 +1,7 @@
 import { DomNode, el, FixedNode } from "skydapp-browser";
 import { SkyUtil } from "skydapp-common";
 import CloneCraft from "../CloneCraft";
+import Config from "../Config";
 import UnitStatusPopup from "./UnitStatusPopup";
 
 export default class TeamPopup extends FixedNode {
@@ -9,6 +10,7 @@ export default class TeamPopup extends FixedNode {
 
     private teamContainer: DomNode;
     private characterList: DomNode;
+    private draggingCloneId: string | undefined;
 
     constructor() {
         super(0, 0);
@@ -46,7 +48,23 @@ export default class TeamPopup extends FixedNode {
                         ),
                     ),
                     el(".collection-container",
-                        this.characterList = el(".character-container"),
+                        this.characterList = el(".character-container", {
+                            dragenter: (event) => {
+                                event.preventDefault();
+                            },
+                            dragover: (event) => {
+                                event.preventDefault();
+                            },
+                            dragleave: () => {
+                            },
+                            drop: async () => {
+                                if (this.draggingCloneId !== undefined) {
+                                    CloneCraft.removeCloneFromTeam(this.draggingCloneId);
+                                    await CloneCraft.saveTeam();
+                                    this.loadClones();
+                                }
+                            },
+                        }),
                         el(".check-container",
                             el(".checkbox-container",
                                 el("input", { type: "checkbox" }),
@@ -65,53 +83,94 @@ export default class TeamPopup extends FixedNode {
                 )
             ),
         );
-        this.load();
+        this.loadClones();
+    }
 
-        SkyUtil.repeat(3, (team) => {
+    private loadClones() {
+
+        this.teamContainer.empty();
+
+        SkyUtil.repeat(3, (teamIndex) => {
+
+            let teamClones = CloneCraft.team.units[teamIndex];
+            if (teamClones === undefined) {
+                teamClones = [];
+            }
+
             const teamInfo = el(".team-info",
                 el(".property",
                     el("img", { src: "/images/ui/aura.png", alt: "aura" }),
                     el("p", "3"),
                 ),
             ).appendTo(this.teamContainer);
+
             const slotContainer = el(".slot-container").appendTo(teamInfo);
-            SkyUtil.repeat(3, (index) => {
-                el(".slot", {
+
+            SkyUtil.repeat(3, (unitIndex) => {
+                const clone = teamClones[unitIndex];
+                const slot = el(".slot", {
                     dragenter: (event) => {
-                        console.log("dragenter");
                         event.preventDefault();
                     },
                     dragover: (event) => {
-                        console.log("dragover");
                         event.preventDefault();
                     },
                     dragleave: () => {
-                        console.log("dragleave");
                     },
-                    drop: () => {
-                        console.log("drop");
+                    drop: async () => {
+                        if (this.draggingCloneId !== undefined) {
+                            CloneCraft.removeCloneFromTeam(this.draggingCloneId);
+
+                            for (let i = CloneCraft.team.units.length; i < 3; i += 1) {
+                                CloneCraft.team.units.push([]);
+                            }
+
+                            const team = CloneCraft.team.units[teamIndex];
+                            team[unitIndex] = {
+                                collection: Config.CND_V3_ID,
+                                tokenId: this.draggingCloneId,
+                            };
+
+                            await CloneCraft.saveTeam();
+                            this.loadClones();
+                        }
                     },
                 }).appendTo(slotContainer);
+
+                if (clone !== undefined && clone !== null) {
+                    const cloneDom = el("a", el("img", { src: "/images/character/character1.jpeg", alt: "character" }), {
+                        click: () => {
+                            new UnitStatusPopup().appendTo(CloneCraft.screen.root);
+                        },
+                    }).appendTo(slot);
+                    cloneDom.domElement.draggable = true;
+                    cloneDom.onDom("dragstart", () => {
+                        this.draggingCloneId = clone.tokenId;
+                    });
+                    cloneDom.onDom("dragend", () => {
+                        this.draggingCloneId = undefined;
+                    });
+                }
             });
         });
-    }
 
-    private async load() {
-        const clones = await CloneCraft.loadAllClones();
         this.characterList.empty();
-        for (const clone of clones) {
-            const cloneDom = el("a", el("img", { src: "/images/character/character1.jpeg", alt: "character" }), {
-                click: () => {
-                    new UnitStatusPopup().appendTo(CloneCraft.screen.root);
-                },
-            }).appendTo(this.characterList);
-            cloneDom.domElement.draggable = true;
-            cloneDom.onDom("drag", () => {
-                console.log("drag");
-            });
-            cloneDom.onDom("dragend", () => {
-                console.log("dragend");
-            });
+
+        for (const clone of CloneCraft.clones) {
+            if (CloneCraft.checkCloneIsInTeam(clone.id) !== true) {
+                const cloneDom = el("a", el("img", { src: "/images/character/character1.jpeg", alt: "character" }), {
+                    click: () => {
+                        new UnitStatusPopup().appendTo(CloneCraft.screen.root);
+                    },
+                }).appendTo(this.characterList);
+                cloneDom.domElement.draggable = true;
+                cloneDom.onDom("dragstart", () => {
+                    this.draggingCloneId = clone.id;
+                });
+                cloneDom.onDom("dragend", () => {
+                    this.draggingCloneId = undefined;
+                });
+            }
         }
     }
 }

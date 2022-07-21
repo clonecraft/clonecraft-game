@@ -1,6 +1,5 @@
 import { el, GameNode } from "skydapp-browser";
-import { SkyRouter } from "skydapp-common";
-import BattlePopup from "../../popup/BattlePopup";
+import CloneCraft from "../../CloneCraft";
 
 export default class BattleButton extends GameNode {
 
@@ -11,7 +10,7 @@ export default class BattleButton extends GameNode {
         super(0, 0);
         this.dom = el("a.battle-button", {
             click: () => {
-                SkyRouter.go("/battle");
+                CloneCraft.goBattle();
             },
         });
         this.dom.style({ width: this.width, height: this.height });

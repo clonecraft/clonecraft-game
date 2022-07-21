@@ -3,7 +3,8 @@ export default class TeamPopup extends FixedNode {
     content: DomNode;
     private teamContainer;
     private characterList;
+    private draggingCloneId;
     constructor();
-    private load;
+    private loadClones;
 }
 //# sourceMappingURL=TeamPopup.d.ts.map
