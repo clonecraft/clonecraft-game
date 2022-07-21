@@ -11,7 +11,7 @@ export default class LoginPopup extends FixedNode {
             this.content = el(".login-popup",
                 el(".top",
                     el("h5", "WELCOME"),
-                    el("h6", "DISCORD LOGIN IS REQUIRED TO ENTER NECTARWAR"),
+                    el("h6", "DISCORD LOGIN IS REQUIRED TO ENTER CLONE CRAFT"),
                 ),
                 el(".content",
                     el("a",

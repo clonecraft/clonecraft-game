@@ -690,17 +690,17 @@ input {
   background-color: #857552;
   color: #FFF;
 }
-.team-popup > .content > .my-panel > .slot-container > .my-container > .slot-container {
+.team-popup > .content > .my-panel > .slot-container > .my-container > .team-container {
   display: flex;
 }
-.team-popup > .content > .my-panel > .slot-container > .my-container > .slot-container > .character-container {
+.team-popup > .content > .my-panel > .slot-container > .my-container > .team-container > .team-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-left: 30px;
 }
-.team-popup > .content > .my-panel > .slot-container > .my-container > .slot-container > .character-container > .property {
+.team-popup > .content > .my-panel > .slot-container > .my-container > .team-container > .team-info > .property {
   display: flex;
   align-items: center;
   margin-left: 4px;
@@ -709,18 +709,19 @@ input {
   color: #e1e2b5;
   margin-bottom: 16px;
 }
-.team-popup > .content > .my-panel > .slot-container > .my-container > .slot-container > .character-container > .property > img {
+.team-popup > .content > .my-panel > .slot-container > .my-container > .team-container > .team-info > .property > img {
   width: 70%;
   height: 70%;
 }
-.team-popup > .content > .my-panel > .slot-container > .my-container > .slot-container > .character-container > .property > p {
+.team-popup > .content > .my-panel > .slot-container > .my-container > .team-container > .team-info > .property > p {
   margin-left: 16px;
 }
-.team-popup > .content > .my-panel > .slot-container > .my-container > .slot-container > .character-container > .character-line {
+.team-popup > .content > .my-panel > .slot-container > .my-container > .team-container > .team-info > .slot-container {
   max-height: 400px;
   overflow-y: scroll;
 }
-.team-popup > .content > .my-panel > .slot-container > .my-container > .slot-container > .character-container > .character-line > img {
+.team-popup > .content > .my-panel > .slot-container > .my-container > .team-container > .team-info > .slot-container > .slot {
+  background-image: url("/images/character/unit-slot.png");
   width: 100px;
   height: 100px;
   border: 1px solid #857552;

@@ -66,10 +66,10 @@
                         }
                     }
 
-                    >.slot-container {
+                    >.team-container {
                         display: flex;
 
-                        >.character-container {
+                        >.team-info {
                             display        : flex;
                             flex-direction : column;
                             align-items    : center;
@@ -95,14 +95,15 @@
                                 }
                             }
 
-                            >.character-line {
+                            >.slot-container {
                                 max-height: 400px;
                                 overflow-y: scroll;
 
-                                >img {
-                                    width : 100px;
-                                    height: 100px;
-                                    border: 1px solid #857552;
+                                >.slot {
+                                    background-image: url("/images/character/unit-slot.png");
+                                    width           : 100px;
+                                    height          : 100px;
+                                    border          : 1px solid #857552;
                                 }
                             }
                         }
