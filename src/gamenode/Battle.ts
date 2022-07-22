@@ -1,5 +1,6 @@
-import { Delay, DomNode, el, GameNode, ImageNode, SpineNode } from "skydapp-browser";
+import { DomNode, el, GameNode, ImageNode, SpineNode } from "skydapp-browser";
 import CloneCraft from "../CloneCraft";
+import Ready from "./battle/Ready";
 
 export default class Battle extends GameNode {
 
@@ -194,21 +195,12 @@ export default class Battle extends GameNode {
                 ),
             ),
         );
-        this.append(
-            new ImageNode(0, 0, "/images/battle/battlefield.png"),
-            spine = new SpineNode(0, 0, {
-                json: "/images/battle/battle.json",
-                atlas: "/images/battle/battle.atlas",
-                png: "/images/battle/battle.png",
-                animation: "animation",
-            }),
-        );
-        spine.on("load", () => {
-            new Delay(this, () => {
-                spine.fadeOut(0.002, () => {
-                    spine.delete();
-                });
-            }, 1000);
+
+        this.append(new ImageNode(0, 0, "/images/battle/battlefield.png"));
+
+        const ready = new Ready().appendTo(this);
+        ready.on("next", () => {
+            console.log("next");
         });
     }
 }

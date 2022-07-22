@@ -31,6 +31,7 @@ export default class MintPopup extends FixedNode {
                             await SkyUtil.repeatResultAsync(count, async () => {
                                 console.log(await CloneCraft.testCNDV3Mint());
                             });
+                            await CloneCraft.loadAll();
                             this.delete();
                             alert("민팅 완료");
                         },

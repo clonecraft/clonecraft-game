@@ -15,6 +15,7 @@ declare class CloneCraft {
     team: TeamInfo;
     start(): void;
     checkDiscordLogin(): Promise<boolean>;
+    loadAll(): Promise<void>;
     goBattle(): void;
     goWorld(): void;
     saveTeam(): Promise<void>;

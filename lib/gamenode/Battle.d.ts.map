@@ -1,1 +1,1 @@
-{"version":3,"file":"Battle.d.ts","sourceRoot":"","sources":["../../src/gamenode/Battle.ts"],"names":[],"mappings":"AAAA,OAAO,EAAS,OAAO,EAAM,QAAQ,EAAwB,MAAM,iBAAiB,CAAC;AAGrF,MAAM,CAAC,OAAO,OAAO,MAAO,SAAQ,QAAQ;IAEjC,OAAO,EAAE,OAAO,CAAC;;CAgN3B"}
+{"version":3,"file":"Battle.d.ts","sourceRoot":"","sources":["../../src/gamenode/Battle.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAM,QAAQ,EAAwB,MAAM,iBAAiB,CAAC;AAI9E,MAAM,CAAC,OAAO,OAAO,MAAO,SAAQ,QAAQ;IAEjC,OAAO,EAAE,OAAO,CAAC;;CAuM3B"}

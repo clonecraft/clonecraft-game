@@ -75,9 +75,7 @@ class CloneCraft {
                 if (this.currentUserInfo === undefined) {
                     throw new Error("Current User Not Exists.");
                 }
-                const data = await this.client.send("load-all");
-                this.clones = data.clones;
-                this.team = data.team;
+                await this.loadAll();
                 return true;
             } catch (error) {
                 console.error(error);
@@ -90,6 +88,12 @@ class CloneCraft {
             this.codeStore.delete("code");
             return false;
         }
+    }
+
+    public async loadAll() {
+        const data = await this.client.send("load-all");
+        this.clones = data.clones;
+        this.team = data.team;
     }
 
     public goBattle() {
