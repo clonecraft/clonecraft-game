@@ -1,6 +1,7 @@
 import { GameNode, ImageNode } from "skydapp-browser";
 import CloneCraft from "../CloneCraft";
 import LoginPopup from "../popup/LoginPopup";
+import Prompt from "../popup/Prompt";
 import WorldUI from "../ui/WorldUI";
 
 export default class World extends GameNode {

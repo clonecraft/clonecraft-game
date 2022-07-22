@@ -1279,6 +1279,7 @@ input {
   font-size: 24px;
   font-family: 'Trajan Pro Bold';
   border: 1px solid #5b5a36;
+  text-decoration: none;
 }
 .login-popup > .content > a > img {
   margin-right: 48px;
@@ -1421,5 +1422,306 @@ input {
 .clones-popup > .content > .clone-slot > .text-container > .id {
   text-align: right;
   color: #e1e2b5;
+}
+.shop-popup {
+  background-image: url("/images/ui/popup.png");
+  background-size: 100% 100%;
+  width: 1000px;
+  height: 600px;
+  position: relative;
+}
+.shop-popup > .top {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.shop-popup > .top > h6 {
+  margin-top: 6px;
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  font-size: 24px;
+}
+.shop-popup > .top > a {
+  height: 40px;
+}
+.shop-popup > .top > a > img {
+  height: 40px;
+}
+.shop-popup > .content {
+  display: flex;
+  max-height: 558px;
+  height: 100%;
+}
+.shop-popup > .content > .tab-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 175px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11, 11, 9);
+  border: 1px solid #555433;
+}
+.shop-popup > .content > .tab-container > a {
+  display: flex;
+  align-items: center;
+  max-width: 262px;
+  width: 100%;
+  font-family: 'Trajan Pro Regular';
+  background-color: #191615;
+  color: #fff;
+  padding-left: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border: 1px solid #555433;
+}
+.shop-popup > .content > .tab-container > a:hover {
+  background-color: #7a6743;
+}
+.shop-popup > .content > .grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4px;
+  font-family: 'Trajan Pro Regular';
+}
+.shop-popup > .content > .grid-container > .item {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  color: #e1e2b5;
+}
+.shop-popup > .content > .grid-container > .item > .content {
+  border: 1px solid #555433;
+  padding: 8px;
+}
+.shop-popup > .content > .grid-container > .item > .content > img {
+  max-width: 75px;
+  margin: 8px 32px;
+}
+.shop-popup > .content > .grid-container > .item > .content > .amount-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.shop-popup > .content > .grid-container > .item > .price-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #555433;
+  padding: 8px;
+}
+.shop-popup > .content > .grid-container > .item > .price-container > img {
+  margin-left: 8px;
+  height: 16px;
+}
+.buy-popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 500px;
+  height: 600px;
+  border: 1px solid #555433;
+  background-color: #191615;
+  padding: 8px;
+}
+.buy-popup > .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.buy-popup > .content > h6 {
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  font-size: 24px;
+  padding: 16px 0px;
+}
+.buy-popup > .content > .image-container {
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #555433;
+  background-color: #161411;
+  padding: 16px;
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+}
+.buy-popup > .content > .image-container > .text-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.buy-popup > .content > .image-container > .text-container > p {
+  margin-top: 32px;
+}
+.buy-popup > .content > .text-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+.buy-popup > .content > .text-container > p {
+  margin-left: 16px;
+  margin-top: 16px;
+  color: #95947f;
+  font-family: 'Trajan Pro Regular';
+}
+.buy-popup > .button-container {
+  display: flex;
+}
+.buy-popup > .button-container > a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  font-family: 'Trajan Pro Regular';
+  border: 1px solid #555433;
+  color: #e1e2b5;
+}
+.buy-popup > .button-container > a > .amber-container {
+  display: flex;
+  align-items: center;
+}
+.buy-popup > .button-container > a > .amber-container > .price {
+  font-size: 14px;
+}
+.buy-popup > .button-container > a > .amber-container > img {
+  margin-left: 8px;
+  height: 16px;
+}
+.buy-popup > .button-container > .buy {
+  background-color: #2c1111;
+}
+.alert {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-image: url("/images/ui/popupBack.png");
+  background-size: 100% 100%;
+  width: 600px;
+  height: 400px;
+  position: relative;
+}
+.alert > .content > header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  font-size: 20px;
+  margin-top: 32px;
+}
+.alert > .content > p {
+  padding: 32px;
+  font-family: 'Trajan Pro Regular';
+  color: #e1e2b5;
+}
+.alert > .button-container {
+  display: flex;
+  gap: 100px;
+  padding: 8px;
+}
+.alert > .button-container > a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  font-family: 'Trajan Pro Regular';
+  border: 1px solid #555433;
+  color: #e1e2b5;
+  background-color: #1a1717;
+}
+.alert > .button-container > .highlight {
+  background-color: #2c1111;
+}
+.confirm {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-image: url("/images/ui/popupBack.png");
+  background-size: 100% 100%;
+  width: 600px;
+  height: 400px;
+  position: relative;
+}
+.confirm > .content > header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  font-size: 20px;
+  margin-top: 32px;
+}
+.confirm > .content > p {
+  padding: 32px;
+  font-family: 'Trajan Pro Regular';
+  color: #e1e2b5;
+}
+.confirm > .button-container {
+  display: flex;
+  gap: 100px;
+  padding: 8px;
+}
+.confirm > .button-container > a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  font-family: 'Trajan Pro Regular';
+  border: 1px solid #555433;
+  color: #e1e2b5;
+  background-color: #1a1717;
+}
+.confirm > .button-container > .highlight {
+  background-color: #2c1111;
+}
+.prompt {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-image: url("/images/ui/popupBack.png");
+  background-size: 100% 100%;
+  width: 600px;
+  height: 400px;
+  position: relative;
+}
+.prompt > .content > header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Trajan Pro Bold';
+  color: #e1e2b5;
+  font-size: 20px;
+  margin-top: 32px;
+}
+.prompt > .content > p {
+  padding: 32px;
+  font-family: 'Trajan Pro Regular';
+  color: #e1e2b5;
+}
+.prompt > .interaction-container > .input-container {
+  margin: 32px;
+}
+.prompt > .interaction-container > .input-container > input {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #555433;
+}
+.prompt > .interaction-container > a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  font-family: 'Trajan Pro Regular';
+  border: 1px solid #555433;
+  color: #e1e2b5;
+  background-color: #1a1717;
 }
 
