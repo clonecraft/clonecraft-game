@@ -1,5 +1,5 @@
 import { msg } from "skydapp-browser";
-import { SkyRouter } from "skydapp-common";
+import { SkyRouter } from "skydapp-browser";
 import superagent from "superagent";
 import CloneCraft from "./CloneCraft";
 

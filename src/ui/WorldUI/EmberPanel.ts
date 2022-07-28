@@ -1,4 +1,7 @@
+import { utils } from "ethers";
 import { el, GameNode } from "skydapp-browser";
+import { SkyUtil } from "skydapp-common";
+import CloneCraft from "../../CloneCraft";
 
 export default class EmberPanel extends GameNode {
 
@@ -8,7 +11,7 @@ export default class EmberPanel extends GameNode {
     constructor() {
         super(0, 0);
         this.dom = el(".ember-panel",
-            el("p", "644443"),
+            el("p", SkyUtil.numberWithCommas(utils.formatEther(CloneCraft.currentUserAmber))),
         );
         this.dom.style({ width: this.width, height: this.height });
     }

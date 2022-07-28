@@ -1,3 +1,4 @@
+import { BigNumber } from "ethers";
 import { Fullscreen } from "skydapp-browser";
 import DiscordUserInfo from "./datamodel/DiscordUserInfo";
 import TeamInfo from "./datamodel/TeamInfo";
@@ -11,6 +12,7 @@ declare class CloneCraft {
     private battle;
     private reconnectingPopup;
     currentUserInfo: DiscordUserInfo | undefined;
+    currentUserAmber: BigNumber;
     clones: UniqueItem[];
     team: TeamInfo;
     start(): void;

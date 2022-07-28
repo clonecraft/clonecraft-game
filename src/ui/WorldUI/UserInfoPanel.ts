@@ -9,7 +9,7 @@ export default class UserInfoPanel extends GameNode {
     this.dom = el(
       ".user-info-panel",
       el(".profile-image"),
-      el(".info-container", el("h6", "Clonesneverdie"), el("p", "lv.3"))
+      el(".info-container", el("h6", "Clonesneverdie")/*, el("p", "lv.3")*/)
     );
     this.dom.style({ width: this.width, height: this.height });
   }

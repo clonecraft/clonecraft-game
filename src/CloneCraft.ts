@@ -1,3 +1,4 @@
+import { BigNumber } from "ethers";
 import { Fullscreen, Store, WebSocketClient } from "skydapp-browser";
 import Config from "./Config";
 import DiscordUserInfo from "./datamodel/DiscordUserInfo";
@@ -20,6 +21,7 @@ class CloneCraft {
     private reconnectingPopup: ReconnectingPopup | undefined;
 
     public currentUserInfo: DiscordUserInfo | undefined;
+    public currentUserAmber: BigNumber = BigNumber.from(0);
     public clones: UniqueItem[] = [];
     public team: TeamInfo = { units: [] };
 
@@ -92,6 +94,7 @@ class CloneCraft {
 
     public async loadAll() {
         const data = await this.client.send("load-all");
+        this.currentUserAmber = data.amber;
         this.clones = data.clones;
         this.team = data.team;
     }
