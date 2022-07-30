@@ -11,6 +11,7 @@ export default class EmberPanel extends GameNode {
     constructor() {
         super(0, 0);
         this.dom = el(".ember-panel",
+            el("a", "받기", { href: "https://amber-faucet.clonecraft.co.kr/" }),
             el("p", SkyUtil.numberWithCommas(utils.formatEther(CloneCraft.currentUserAmber))),
         );
         this.dom.style({ width: this.width, height: this.height });

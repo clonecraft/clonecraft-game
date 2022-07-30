@@ -239,11 +239,15 @@ input {
   height: 115px;
 }
 .tool-panel > .mint {
-  background-image: url("/images/ui/team-button.png");
+  background-image: url("/images/ui/mint-button.png");
   background-size: 100% 100%;
 }
 .tool-panel > .team {
   background-image: url("/images/ui/team-button.png");
+  background-size: 100% 100%;
+}
+.tool-panel > .shop {
+  background-image: url("/images/ui/shop-button.png");
   background-size: 100% 100%;
 }
 .tool-panel > .explore {
@@ -274,6 +278,7 @@ input {
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 .battle-popup {
   background-image: url("/images/ui/popup.png");
@@ -1461,6 +1466,7 @@ input {
   height: 100%;
   background-color: rgba(11, 11, 9);
   border: 1px solid #555433;
+  overflow-y: scroll;
 }
 .shop-popup > .content > .tab-container > a {
   display: flex;
@@ -1479,16 +1485,20 @@ input {
   background-color: #7a6743;
 }
 .shop-popup > .content > .grid-container {
-  display: flex;
-  flex-wrap: wrap;
+  flex-grow: 1;
   padding: 4px;
   font-family: 'Trajan Pro Regular';
+  overflow-y: scroll;
+  width: 800px;
 }
 .shop-popup > .content > .grid-container > .item {
+  float: left;
+  width: 150px;
   display: flex;
   text-align: center;
   flex-direction: column;
   color: #e1e2b5;
+  cursor: pointer;
 }
 .shop-popup > .content > .grid-container > .item > .content {
   border: 1px solid #555433;
@@ -1547,6 +1557,10 @@ input {
   padding: 16px;
   font-family: 'Trajan Pro Bold';
   color: #e1e2b5;
+}
+.buy-popup > .content > .image-container > img {
+  max-width: 100%;
+  max-height: 100%;
 }
 .buy-popup > .content > .image-container > .text-container {
   width: 100%;

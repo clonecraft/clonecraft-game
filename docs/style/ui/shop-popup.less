@@ -40,6 +40,7 @@
             height          : 100%;
             background-color: rgba(11, 11, 9);
             border          : 1px solid rgb(85, 84, 51);
+            overflow-y      : scroll;
 
             >a {
                 display         : flex;
@@ -61,16 +62,20 @@
         }
 
         >.grid-container {
-            display    : flex;
-            flex-wrap  : wrap;
+            flex-grow  : 1;
             padding    : 4px;
             font-family: 'Trajan Pro Regular';
+            overflow-y : scroll;
+            width      : 800px;
 
             >.item {
+                float         : left;
+                width         : 150px;
                 display       : flex;
                 text-align    : center;
                 flex-direction: column;
                 color         : #e1e2b5;
+                cursor        : pointer;
 
                 >.content {
                     border : 1px solid rgb(85, 84, 51);

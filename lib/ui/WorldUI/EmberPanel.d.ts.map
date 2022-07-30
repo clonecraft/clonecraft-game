@@ -1,1 +1,1 @@
-{"version":3,"file":"EmberPanel.d.ts","sourceRoot":"","sources":["../../../src/ui/WorldUI/EmberPanel.ts"],"names":[],"mappings":"AACA,OAAO,EAAM,QAAQ,EAAE,MAAM,iBAAiB,CAAC;AAI/C,MAAM,CAAC,OAAO,OAAO,UAAW,SAAQ,QAAQ;IAErC,KAAK,SAAO;IACZ,MAAM,SAAM;;CAStB"}
+{"version":3,"file":"EmberPanel.d.ts","sourceRoot":"","sources":["../../../src/ui/WorldUI/EmberPanel.ts"],"names":[],"mappings":"AACA,OAAO,EAAM,QAAQ,EAAE,MAAM,iBAAiB,CAAC;AAI/C,MAAM,CAAC,OAAO,OAAO,UAAW,SAAQ,QAAQ;IAErC,KAAK,SAAO;IACZ,MAAM,SAAM;;CAUtB"}
