@@ -19,8 +19,9 @@ export default class Alert extends FixedNode {
                     el("p", message)
                 ),
                 el(".button-container",
-                    el("a", "CLOSE"),
-                    el("a.highlight", confirmTitle),
+                    el("a.highlight", confirmTitle === undefined ? "CLOSE" : confirmTitle, {
+                        click: () => this.delete(),
+                    }),
                 ),
             ),
         );

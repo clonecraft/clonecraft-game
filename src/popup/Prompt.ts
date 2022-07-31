@@ -1,6 +1,6 @@
 import { DomNode, el, FixedNode } from "skydapp-browser";
 
-export default class Alert extends FixedNode {
+export default class Prompt extends FixedNode {
 
     public content: DomNode;
     private input: DomNode<HTMLInputElement>;

@@ -1,7 +1,9 @@
 import { BigNumber } from "ethers";
 import { Fullscreen, Store, WebSocketClient } from "skydapp-browser";
+import { EventContainer } from "skydapp-common";
 import Config from "./Config";
 import DiscordUserInfo from "./datamodel/DiscordUserInfo";
+import ItemBalance from "./datamodel/ItemBalance";
 import TeamInfo from "./datamodel/TeamInfo";
 import UniqueItem from "./datamodel/UniqueItem";
 import Battle from "./gamenode/Battle";
@@ -9,7 +11,7 @@ import World from "./gamenode/World";
 import FirstConnectingPopup from "./popup/FirstConnectingPopup";
 import ReconnectingPopup from "./popup/ReconnectingPopup";
 
-class CloneCraft {
+class CloneCraft extends EventContainer {
     private codeStore = new Store("codeStore");
 
     public screen: Fullscreen = new Fullscreen();
@@ -23,6 +25,7 @@ class CloneCraft {
     public currentUserInfo: DiscordUserInfo | undefined;
     public currentUserAmber: BigNumber = BigNumber.from(0);
     public clones: UniqueItem[] = [];
+    public itemBalances: ItemBalance[] = [];
     public team: TeamInfo = { units: [] };
 
     public start() {
@@ -94,9 +97,16 @@ class CloneCraft {
 
     public async loadAll() {
         const data = await this.client.send("load-all");
-        this.currentUserAmber = data.amber;
+        this.currentUserAmber = BigNumber.from(data.amber);
         this.clones = data.clones;
+        this.itemBalances = data.itemBalances;
         this.team = data.team;
+        this.fireEvent("changeAmber");
+    }
+
+    public async loadAmber() {
+        this.currentUserAmber = BigNumber.from(await this.client.send("load-amber"));
+        this.fireEvent("changeAmber");
     }
 
     public goBattle() {
@@ -115,6 +125,10 @@ class CloneCraft {
 
     public async saveTeam() {
         await this.client.send("save-team", this.team);
+    }
+
+    public async buyItem(itemId: number) {
+        await this.client.send("buy-item", itemId);
     }
 
     public removeCloneFromTeam(cloneId: string) {
