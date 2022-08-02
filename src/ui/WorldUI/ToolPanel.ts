@@ -1,5 +1,6 @@
 import { el, GameNode } from "skydapp-browser";
 import CloneCraft from "../../CloneCraft";
+import ClonesPopup from "../../popup/ClonesPopup";
 import MintPopup from "../../popup/MintPopup";
 import RankingPopup from "../../popup/RankingPopup";
 import ShopPopup from "../../popup/ShopPopup";
@@ -7,7 +8,7 @@ import TeamPopup from "../../popup/TeamPopup";
 
 export default class ToolPanel extends GameNode {
 
-    public width = 100 * 5;
+    public width = 100 * 6;
     public height = 126;
 
     constructor() {
@@ -16,6 +17,11 @@ export default class ToolPanel extends GameNode {
             el("a.mint", {
                 click: () => {
                     new MintPopup().appendTo(CloneCraft.screen.root);
+                },
+            }),
+            el("a.clones", {
+                click: () => {
+                    new ClonesPopup().appendTo(CloneCraft.screen.root);
                 },
             }),
             el("a.team", {

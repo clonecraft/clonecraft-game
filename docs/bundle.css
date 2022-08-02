@@ -242,6 +242,10 @@ input {
   background-image: url("/images/ui/mint-button.png");
   background-size: 100% 100%;
 }
+.tool-panel > .clones {
+  background-image: url("/images/ui/clones-button.png");
+  background-size: 100% 100%;
+}
 .tool-panel > .team {
   background-image: url("/images/ui/team-button.png");
   background-size: 100% 100%;

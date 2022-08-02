@@ -1,4 +1,5 @@
 import { DomNode, el, FixedNode } from "skydapp-browser";
+import CloneCraft from "../CloneCraft";
 
 export default class ClonesPopup extends FixedNode {
 
@@ -27,5 +28,9 @@ export default class ClonesPopup extends FixedNode {
                 ),
             ),
         );
+
+        for (const clone of CloneCraft.clones) {
+            console.log(clone);
+        }
     }
 }
